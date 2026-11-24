@@ -87,10 +87,23 @@ def clear_pending(upto):
     return before - len(pending["items"])
 
 
+def log_run(result):
+    """보고 작업이 돌았다는 기록. 변경이 없는 날에도 남겨 웹 페이지에서 가동 여부를 볼 수 있게 한다."""
+    path = os.path.join(DATA, "routine.json")
+    log = load(path, {"runs": []})
+    now = datetime.now(KST)
+    entry = {"at": now.strftime("%Y-%m-%d %H:%M"), "date": now.strftime("%Y-%m-%d"), "result": result}
+    log["last"] = entry
+    log["runs"] = ([entry] + log.get("runs", []))[:60]
+    save(path, log)
+
+
 def main():
     today = datetime.now(KST).strftime("%Y-%m-%d")
     if len(sys.argv) == 2 and sys.argv[1] == "--clear-only":
-        print("대기 항목 %d건 비움" % clear_pending(today))
+        n = clear_pending(today)
+        log_run("보고할 변경 없음(새 글 %d건 제외)" % n if n else "보고할 변경 없음")
+        print("대기 항목 %d건 비움" % n)
         return 0
     if len(sys.argv) != 2:
         print(__doc__)
@@ -126,6 +139,7 @@ def main():
     idx["updated"] = datetime.now(KST).strftime("%Y-%m-%d %H:%M")
     save(idx_path, idx)
     cleared = clear_pending(max(today, rep["date"]))
+    log_run("보고서 반영 %d건(A %d, B %d)" % (day["count"], day["a"], day["b"]))
     print("반영 완료: %s, 항목 %d건(A %d, B %d), 대기 항목 %d건 비움" % (rep["date"], day["count"], day["a"], day["b"], cleared))
     return 0
 

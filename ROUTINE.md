@@ -28,7 +28,7 @@ python3 scripts/check.py
 
 ## 3 판단
 
-`data/pending.json`의 `items`가 비어 있으면 6으로 간다.
+`data/pending.json`의 `items`가 비어 있으면 `python3 scripts/publish.py --clear-only`를 실행해 가동 기록만 남기고 5로 간다.
 
 항목마다 등급을 매긴다. `matched`가 false인 항목도 제목을 보고 판단한다.
 
@@ -40,7 +40,7 @@ python3 scripts/check.py
 
 ## 4 보고서 작성
 
-A나 B가 하나도 없으면 보고서를 만들지 않고 대기 항목만 비운다.
+A나 B가 하나도 없으면 보고서를 만들지 않고 대기 항목만 비운 뒤 5로 간다.
 
 ```
 python3 scripts/publish.py --clear-only
@@ -103,6 +103,7 @@ python3 scripts/publish.py reports/$TODAY.json
 ```
 git add -A
 git commit -m "$TODAY 점검: 변경 N건"
+git pull --rebase origin main
 git push origin HEAD:main
 ```
 
@@ -114,4 +115,4 @@ git push origin HEAD:claude/reg-watch-data
 
 ## 6 끝맺음
 
-바뀐 파일이 있으면 5와 같은 방법으로 올리고, 결과를 두세 줄로 보고한다. 점검 출처 수, 실패한 출처, 신규 건수, 보고서에 넣은 건수(A, B), 올린 브랜치를 적는다.
+결과를 두세 줄로 보고한다. 점검 출처 수, 실패한 출처, 신규 건수, 보고서에 넣은 건수(A, B), 올린 브랜치를 적는다.

@@ -109,7 +109,7 @@ td.nw{white-space:nowrap}
 
 <main class="wrap">
   <section class="kpis" aria-label="점검 현황">
-    <div class="kpi"><div class="lab">마지막 점검</div><div class="val" id="k-last">-</div></div>
+    <div class="kpi"><div class="lab">마지막 수집 <span id="k-rt"></span></div><div class="val" id="k-last">-</div></div>
     <div class="kpi"><div class="lab">최근 30일 변경</div><div class="val" id="k-30">-</div></div>
     <div class="kpi"><div class="lab">그중 직접 관련(A)</div><div class="val" id="k-a">-</div></div>
     <div class="kpi"><div class="lab">점검 출처</div><div class="val" id="k-src">-</div></div>
@@ -307,6 +307,9 @@ td.nw{white-space:nowrap}
   }
 
   $("print").addEventListener("click", function () { window.print(); });
+  getJSON("data/routine.json").then(function (r) {
+    if (r.last) $("k-rt").textContent = "/ 보고 작업 " + r.last.at.slice(5).replace("-", ".");
+  }).catch(function () {});
   getJSON("data/status.json").then(renderStatus).catch(function () { $("k-last").textContent = "기록 없음"; });
   getJSON("data/changes.json").then(renderHistory).catch(function () { renderHistory({ days: [] }); });
 })();
