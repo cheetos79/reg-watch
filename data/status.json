@@ -1,6 +1,14 @@
 {
  "runs": [
   {
+   "date": "2026-11-25",
+   "at": "2026-11-25 08:33",
+   "checked": 25,
+   "failed": 25,
+   "new": 0,
+   "matched": 0
+  },
+  {
    "date": "2026-11-24",
    "at": "2026-11-24 09:39",
    "checked": 25,
@@ -18,10 +26,10 @@
   }
  ],
  "last": {
-  "date": "2026-11-24",
-  "at": "2026-11-24 09:39",
+  "date": "2026-11-25",
+  "at": "2026-11-25 08:33",
   "checked": 25,
-  "failed": 0,
+  "failed": 25,
   "new": 0,
   "matched": 0
  },
@@ -31,275 +39,250 @@
    "name": "자본시장과 금융투자업에 관한 법률",
    "area": "공시",
    "type": "law",
-   "ok": true,
-   "count": 15,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2026-09-08"
+   "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
   },
   {
    "id": "law_fscma_dec",
    "name": "자본시장과 금융투자업에 관한 법률 시행령",
    "area": "공시",
    "type": "law",
-   "ok": true,
-   "count": 15,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2026-11-10"
+   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or "
   },
   {
    "id": "law_fscma_rule",
    "name": "자본시장과 금융투자업에 관한 법률 시행규칙",
    "area": "공시",
    "type": "law",
-   "ok": true,
-   "count": 15,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2026-10-20"
+   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or "
   },
   {
    "id": "law_audit",
    "name": "주식회사 등의 외부감사에 관한 법률",
    "area": "회계",
    "type": "law",
-   "ok": true,
-   "count": 15,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2025-04-01"
+   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or "
   },
   {
    "id": "law_audit_dec",
    "name": "주식회사 등의 외부감사에 관한 법률 시행령",
    "area": "회계",
    "type": "law",
-   "ok": true,
-   "count": 15,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2026-05-26"
+   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or "
   },
   {
    "id": "law_commercial",
    "name": "상법",
    "area": "IR·지배구조",
    "type": "law",
-   "ok": true,
-   "count": 15,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2026-03-06"
+   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or "
   },
   {
    "id": "law_commercial_dec",
    "name": "상법 시행령",
    "area": "IR·지배구조",
    "type": "law",
-   "ok": true,
-   "count": 15,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2026-07-21"
+   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or "
   },
   {
    "id": "law_esec",
    "name": "주식ㆍ사채 등의 전자등록에 관한 법률",
    "area": "IR·지배구조",
    "type": "law",
-   "ok": true,
-   "count": 6,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2026-02-03"
+   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or "
   },
   {
    "id": "law_esec_dec",
    "name": "주식ㆍ사채 등의 전자등록에 관한 법률 시행령",
    "area": "IR·지배구조",
    "type": "law",
-   "ok": true,
-   "count": 6,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2026-09-29"
+   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or "
   },
   {
    "id": "law_corptax",
    "name": "법인세법",
    "area": "세무",
    "type": "law",
-   "ok": true,
-   "count": 15,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2025-12-23"
+   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or "
   },
   {
    "id": "law_incometax",
    "name": "소득세법",
    "area": "세무",
    "type": "law",
-   "ok": true,
-   "count": 15,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2026-09-08"
+   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or "
   },
   {
    "id": "adm_issue",
    "name": "증권의 발행 및 공시 등에 관한 규정",
    "area": "공시",
    "type": "admrul",
-   "ok": true,
-   "count": 1,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2026-11-03"
+   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or "
   },
   {
    "id": "adm_audit",
    "name": "외부감사 및 회계 등에 관한 규정",
    "area": "회계",
    "type": "admrul",
-   "ok": true,
-   "count": 1,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2026-10-07"
+   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or "
   },
   {
    "id": "fsc_leg",
    "name": "금융위원회 입법예고",
    "area": "공시·회계",
    "type": "board",
-   "ok": true,
-   "count": 10,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2026-11-18"
+   "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
   },
   {
    "id": "fsc_rule",
    "name": "금융위원회 규정변경예고",
    "area": "공시·회계",
    "type": "board",
-   "ok": true,
-   "count": 10,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2026-11-18"
+   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or "
   },
   {
    "id": "fsc_press",
    "name": "금융위원회 보도자료",
    "area": "공시·회계",
    "type": "board",
-   "ok": true,
-   "count": 10,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2026-11-23"
+   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or "
   },
   {
    "id": "fss_rule",
    "name": "금융감독원 세칙 제·개정 예고",
    "area": "공시·회계",
    "type": "board",
-   "ok": true,
-   "count": 10,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2026-11-16"
+   "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
   },
   {
    "id": "fss_press",
    "name": "금융감독원 보도자료",
    "area": "공시·회계",
    "type": "board",
-   "ok": true,
-   "count": 10,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2026-11-24"
+   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or "
   },
   {
    "id": "krx_rev",
    "name": "한국거래소 최근 개정 규정",
    "area": "공시",
    "type": "board",
-   "ok": true,
-   "count": 10,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2026-12-14"
+   "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
   },
   {
    "id": "krx_notice",
    "name": "한국거래소 규정 제·개정 예고",
    "area": "공시",
    "type": "board",
-   "ok": true,
-   "count": 8,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2026-11-18"
+   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or "
   },
   {
    "id": "kasb_std",
    "name": "한국회계기준원 회계기준 게시판",
    "area": "회계",
    "type": "board",
-   "ok": true,
-   "count": 30,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2026-11-09"
+   "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
   },
   {
    "id": "kasb_press",
    "name": "한국회계기준원 보도자료",
    "area": "회계",
    "type": "board",
-   "ok": true,
-   "count": 10,
+   "ok": false,
+   "count": 0,
    "new": 0,
-   "error": "",
-   "latest": "2026-11-24"
+   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or "
   },
   {
    "id": "moleg_commercial",
    "name": "정부 입법예고(상법)",
    "area": "IR·지배구조",
    "type": "board",
-   "ok": true,
+   "ok": false,
    "count": 0,
    "new": 0,
-   "error": "",
-   "latest": ""
+   "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
   },
   {
    "id": "moleg_fscma",
    "name": "정부 입법예고(자본시장법)",
    "area": "공시",
    "type": "board",
-   "ok": true,
+   "ok": false,
    "count": 0,
    "new": 0,
-   "error": "",
-   "latest": ""
+   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or "
   },
   {
    "id": "moleg_audit",
    "name": "정부 입법예고(외부감사법)",
    "area": "회계",
    "type": "board",
-   "ok": true,
+   "ok": false,
    "count": 0,
    "new": 0,
-   "error": "",
-   "latest": ""
+   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or "
   }
  ],
  "tls_unverified": []
