@@ -2,6 +2,14 @@
  "runs": [
   {
    "date": "2026-11-24",
+   "at": "2026-11-24 09:39",
+   "checked": 25,
+   "failed": 0,
+   "new": 0,
+   "matched": 0
+  },
+  {
+   "date": "2026-11-24",
    "at": "2026-11-24 09:12",
    "checked": 25,
    "failed": 0,
@@ -11,11 +19,11 @@
  ],
  "last": {
   "date": "2026-11-24",
-  "at": "2026-11-24 09:12",
+  "at": "2026-11-24 09:39",
   "checked": 25,
   "failed": 0,
-  "new": 45,
-  "matched": 11
+  "new": 0,
+  "matched": 0
  },
  "sources": [
   {
@@ -36,7 +44,7 @@
    "type": "law",
    "ok": true,
    "count": 15,
-   "new": 1,
+   "new": 0,
    "error": "",
    "latest": "2026-11-10"
   },
@@ -146,7 +154,7 @@
    "type": "admrul",
    "ok": true,
    "count": 1,
-   "new": 1,
+   "new": 0,
    "error": "",
    "latest": "2026-11-03"
   },
@@ -168,7 +176,7 @@
    "type": "board",
    "ok": true,
    "count": 10,
-   "new": 10,
+   "new": 0,
    "error": "",
    "latest": "2026-11-18"
   },
@@ -179,7 +187,7 @@
    "type": "board",
    "ok": true,
    "count": 10,
-   "new": 1,
+   "new": 0,
    "error": "",
    "latest": "2026-11-18"
   },
@@ -190,7 +198,7 @@
    "type": "board",
    "ok": true,
    "count": 10,
-   "new": 9,
+   "new": 0,
    "error": "",
    "latest": "2026-11-23"
   },
@@ -201,7 +209,7 @@
    "type": "board",
    "ok": true,
    "count": 10,
-   "new": 2,
+   "new": 0,
    "error": "",
    "latest": "2026-11-16"
   },
@@ -212,7 +220,7 @@
    "type": "board",
    "ok": true,
    "count": 10,
-   "new": 10,
+   "new": 0,
    "error": "",
    "latest": "2026-11-24"
   },
@@ -223,7 +231,7 @@
    "type": "board",
    "ok": true,
    "count": 10,
-   "new": 3,
+   "new": 0,
    "error": "",
    "latest": "2026-12-14"
   },
@@ -234,7 +242,7 @@
    "type": "board",
    "ok": true,
    "count": 8,
-   "new": 3,
+   "new": 0,
    "error": "",
    "latest": "2026-11-18"
   },
@@ -245,7 +253,7 @@
    "type": "board",
    "ok": true,
    "count": 30,
-   "new": 2,
+   "new": 0,
    "error": "",
    "latest": "2026-11-09"
   },
@@ -256,7 +264,7 @@
    "type": "board",
    "ok": true,
    "count": 10,
-   "new": 3,
+   "new": 0,
    "error": "",
    "latest": "2026-11-24"
   },
