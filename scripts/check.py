@@ -37,6 +37,8 @@ DETAIL_CHARS = 2500
 _cache = {}
 _tls_fallback = set()
 _dead_hosts = {}
+_host_fails = {}
+DEAD_AFTER = 3  # 같은 사이트에서 연속 이 횟수만큼 실패해야 이번 실행에서 포기
 TIMEOUT = 15
 
 
@@ -75,7 +77,7 @@ def decode(raw):
     return raw.decode("utf-8", "replace")
 
 
-def http_get(url, tries=2):
+def http_get(url, tries=4):
     """페이지 본문을 문자열로 돌려준다. 같은 실행 안에서는 한 번만 받는다."""
     if url in _cache:
         return _cache[url]
@@ -97,6 +99,7 @@ def http_get(url, tries=2):
                 if not verify:
                     _tls_fallback.add(host)
                 _cache[url] = text
+                _host_fails[host] = 0
                 return text
             except Exception as exc:  # noqa: BLE001
                 last = exc
@@ -106,8 +109,11 @@ def http_get(url, tries=2):
                 break
         time.sleep(2 * (attempt + 1))
     # 접속 자체가 안 되는 사이트는 이번 실행에서 다시 두드리지 않는다(해외 서버 차단 등)
+    # 일시적 연결 끊김(reset) 한 번으로 전체를 포기하지 않도록 연속 실패가 쌓일 때만 포기한다
     if not isinstance(last, urllib.error.HTTPError):
-        _dead_hosts[host] = "%s: %s" % (type(last).__name__, str(last)[:80])
+        _host_fails[host] = _host_fails.get(host, 0) + 1
+        if _host_fails[host] >= DEAD_AFTER:
+            _dead_hosts[host] = "%s: %s" % (type(last).__name__, str(last)[:80])
     raise last
 
 
