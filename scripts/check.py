@@ -36,6 +36,8 @@ DETAIL_CHARS = 2500
 
 _cache = {}
 _tls_fallback = set()
+_dead_hosts = {}
+TIMEOUT = 15
 
 
 # ---------------------------------------------------------------- 공통 도구
@@ -73,10 +75,13 @@ def decode(raw):
     return raw.decode("utf-8", "replace")
 
 
-def http_get(url, tries=3):
+def http_get(url, tries=2):
     """페이지 본문을 문자열로 돌려준다. 같은 실행 안에서는 한 번만 받는다."""
     if url in _cache:
         return _cache[url]
+    host = urllib.parse.urlsplit(url).netloc
+    if host in _dead_hosts:
+        raise ConnectionError("같은 사이트 앞선 요청 실패로 건너뜀: " + _dead_hosts[host])
     last = None
     for attempt in range(tries):
         for verify in (True, False):
@@ -87,10 +92,10 @@ def http_get(url, tries=3):
                     "Accept-Language": "ko-KR,ko;q=0.9",
                 })
                 ctx = None if verify else ssl._create_unverified_context()
-                with urllib.request.urlopen(req, timeout=30, context=ctx) as res:
+                with urllib.request.urlopen(req, timeout=TIMEOUT, context=ctx) as res:
                     text = decode(res.read())
                 if not verify:
-                    _tls_fallback.add(urllib.parse.urlsplit(url).netloc)
+                    _tls_fallback.add(host)
                 _cache[url] = text
                 return text
             except Exception as exc:  # noqa: BLE001
@@ -100,6 +105,9 @@ def http_get(url, tries=3):
                     continue  # 인증서 사슬이 불완전한 기관 사이트는 검증 없이 한 번 더 시도
                 break
         time.sleep(2 * (attempt + 1))
+    # 접속 자체가 안 되는 사이트는 이번 실행에서 다시 두드리지 않는다(해외 서버 차단 등)
+    if not isinstance(last, urllib.error.HTTPError):
+        _dead_hosts[host] = "%s: %s" % (type(last).__name__, str(last)[:80])
     raise last
 
 
@@ -325,6 +333,8 @@ def run(args):
         except Exception as exc:  # noqa: BLE001
             row["error"] = "%s: %s" % (type(exc).__name__, str(exc)[:160])
         report.append(row)
+        print("  [%s] %-18s 항목 %3d 신규 %2d %s %s" % ("정상" if row["ok"] else "실패", row["id"], row["count"],
+                                                  row["new"], row["name"], row["error"]), flush=True)
         time.sleep(0.4)
 
     for entry in [e for e in new_items if e["matched"]][:DETAIL_LIMIT]:
@@ -334,10 +344,7 @@ def run(args):
     summary = {"date": today, "at": now_kst().strftime("%Y-%m-%d %H:%M"),
                "checked": len(report), "failed": len(failed),
                "new": len(new_items), "matched": sum(1 for e in new_items if e["matched"])}
-    print(json.dumps(summary, ensure_ascii=False))
-    for r in report:
-        mark = "정상" if r["ok"] else "실패"
-        print("  [%s] %-14s 항목 %3d 신규 %2d %s %s" % (mark, r["id"], r["count"], r["new"], r["name"], r["error"]))
+    print(json.dumps(summary, ensure_ascii=False), flush=True)
     for e in new_items:
         print("  + (%s) %s | %s | %s" % ("관련" if e["matched"] else "기타", e["source_name"], e["date"], e["title"][:80]))
 
