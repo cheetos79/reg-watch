@@ -2,6 +2,14 @@
  "runs": [
   {
    "date": "2026-11-25",
+   "at": "2026-11-25 08:44",
+   "checked": 25,
+   "failed": 0,
+   "new": 0,
+   "matched": 0
+  },
+  {
+   "date": "2026-11-25",
    "at": "2026-11-25 08:38",
    "checked": 25,
    "failed": 9,
@@ -35,11 +43,11 @@
  ],
  "last": {
   "date": "2026-11-25",
-  "at": "2026-11-25 08:38",
+  "at": "2026-11-25 08:44",
   "checked": 25,
-  "failed": 9,
-  "new": 10,
-  "matched": 2
+  "failed": 0,
+  "new": 0,
+  "matched": 0
  },
  "sources": [
   {
@@ -91,90 +99,99 @@
    "name": "주식회사 등의 외부감사에 관한 법률 시행령",
    "area": "회계",
    "type": "law",
-   "ok": false,
-   "count": 0,
+   "ok": true,
+   "count": 15,
    "new": 0,
-   "error": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
+   "error": "",
+   "latest": "2026-05-26"
   },
   {
    "id": "law_commercial",
    "name": "상법",
    "area": "IR·지배구조",
    "type": "law",
-   "ok": false,
-   "count": 0,
+   "ok": true,
+   "count": 15,
    "new": 0,
-   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error [Errno 104] Connection reset by peer>"
+   "error": "",
+   "latest": "2026-03-06"
   },
   {
    "id": "law_commercial_dec",
    "name": "상법 시행령",
    "area": "IR·지배구조",
    "type": "law",
-   "ok": false,
-   "count": 0,
+   "ok": true,
+   "count": 15,
    "new": 0,
-   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error [Errno 104] Connection reset by peer>"
+   "error": "",
+   "latest": "2026-07-21"
   },
   {
    "id": "law_esec",
    "name": "주식ㆍ사채 등의 전자등록에 관한 법률",
    "area": "IR·지배구조",
    "type": "law",
-   "ok": false,
-   "count": 0,
+   "ok": true,
+   "count": 6,
    "new": 0,
-   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error [Errno 104] Connection reset by peer>"
+   "error": "",
+   "latest": "2026-02-03"
   },
   {
    "id": "law_esec_dec",
    "name": "주식ㆍ사채 등의 전자등록에 관한 법률 시행령",
    "area": "IR·지배구조",
    "type": "law",
-   "ok": false,
-   "count": 0,
+   "ok": true,
+   "count": 6,
    "new": 0,
-   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error [Errno 104] Connection reset by peer>"
+   "error": "",
+   "latest": "2026-09-29"
   },
   {
    "id": "law_corptax",
    "name": "법인세법",
    "area": "세무",
    "type": "law",
-   "ok": false,
-   "count": 0,
+   "ok": true,
+   "count": 15,
    "new": 0,
-   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error [Errno 104] Connection reset by peer>"
+   "error": "",
+   "latest": "2025-12-23"
   },
   {
    "id": "law_incometax",
    "name": "소득세법",
    "area": "세무",
    "type": "law",
-   "ok": false,
-   "count": 0,
+   "ok": true,
+   "count": 15,
    "new": 0,
-   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error [Errno 104] Connection reset by peer>"
+   "error": "",
+   "latest": "2026-09-08"
   },
   {
    "id": "adm_issue",
    "name": "증권의 발행 및 공시 등에 관한 규정",
    "area": "공시",
    "type": "admrul",
-   "ok": false,
-   "count": 0,
+   "ok": true,
+   "count": 1,
    "new": 0,
-   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error [Errno 104] Connection reset by peer>"
+   "error": "",
+   "latest": "2026-11-03"
   },
   {
    "id": "adm_audit",
    "name": "외부감사 및 회계 등에 관한 규정",
    "area": "회계",
    "type": "admrul",
-   "ok": false,
-   "count": 0,
+   "ok": true,
+   "count": 1,
    "new": 0,
-   "error": "ConnectionError: 같은 사이트 앞선 요청 실패로 건너뜀: URLError: <urlopen error [Errno 104] Connection reset by peer>"
+   "error": "",
+   "latest": "2026-10-07"
   },
   {
    "id": "fsc_leg",
@@ -205,7 +222,7 @@
    "type": "board",
    "ok": true,
    "count": 10,
-   "new": 5,
+   "new": 0,
    "error": "",
    "latest": "2026-11-24"
   },
@@ -227,7 +244,7 @@
    "type": "board",
    "ok": true,
    "count": 10,
-   "new": 4,
+   "new": 0,
    "error": "",
    "latest": "2026-11-24"
   },
@@ -249,7 +266,7 @@
    "type": "board",
    "ok": true,
    "count": 8,
-   "new": 1,
+   "new": 0,
    "error": "",
    "latest": "2026-11-24"
   },
