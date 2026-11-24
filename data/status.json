@@ -1,0 +1,298 @@
+{
+ "runs": [
+  {
+   "date": "2026-11-24",
+   "at": "2026-11-24 09:12",
+   "checked": 25,
+   "failed": 0,
+   "new": 45,
+   "matched": 11
+  }
+ ],
+ "last": {
+  "date": "2026-11-24",
+  "at": "2026-11-24 09:12",
+  "checked": 25,
+  "failed": 0,
+  "new": 45,
+  "matched": 11
+ },
+ "sources": [
+  {
+   "id": "law_fscma",
+   "name": "자본시장과 금융투자업에 관한 법률",
+   "area": "공시",
+   "type": "law",
+   "ok": true,
+   "count": 15,
+   "new": 0,
+   "error": "",
+   "latest": "2026-09-08"
+  },
+  {
+   "id": "law_fscma_dec",
+   "name": "자본시장과 금융투자업에 관한 법률 시행령",
+   "area": "공시",
+   "type": "law",
+   "ok": true,
+   "count": 15,
+   "new": 1,
+   "error": "",
+   "latest": "2026-11-10"
+  },
+  {
+   "id": "law_fscma_rule",
+   "name": "자본시장과 금융투자업에 관한 법률 시행규칙",
+   "area": "공시",
+   "type": "law",
+   "ok": true,
+   "count": 15,
+   "new": 0,
+   "error": "",
+   "latest": "2026-10-20"
+  },
+  {
+   "id": "law_audit",
+   "name": "주식회사 등의 외부감사에 관한 법률",
+   "area": "회계",
+   "type": "law",
+   "ok": true,
+   "count": 15,
+   "new": 0,
+   "error": "",
+   "latest": "2025-04-01"
+  },
+  {
+   "id": "law_audit_dec",
+   "name": "주식회사 등의 외부감사에 관한 법률 시행령",
+   "area": "회계",
+   "type": "law",
+   "ok": true,
+   "count": 15,
+   "new": 0,
+   "error": "",
+   "latest": "2026-05-26"
+  },
+  {
+   "id": "law_commercial",
+   "name": "상법",
+   "area": "IR·지배구조",
+   "type": "law",
+   "ok": true,
+   "count": 15,
+   "new": 0,
+   "error": "",
+   "latest": "2026-03-06"
+  },
+  {
+   "id": "law_commercial_dec",
+   "name": "상법 시행령",
+   "area": "IR·지배구조",
+   "type": "law",
+   "ok": true,
+   "count": 15,
+   "new": 0,
+   "error": "",
+   "latest": "2026-07-21"
+  },
+  {
+   "id": "law_esec",
+   "name": "주식ㆍ사채 등의 전자등록에 관한 법률",
+   "area": "IR·지배구조",
+   "type": "law",
+   "ok": true,
+   "count": 6,
+   "new": 0,
+   "error": "",
+   "latest": "2026-02-03"
+  },
+  {
+   "id": "law_esec_dec",
+   "name": "주식ㆍ사채 등의 전자등록에 관한 법률 시행령",
+   "area": "IR·지배구조",
+   "type": "law",
+   "ok": true,
+   "count": 6,
+   "new": 0,
+   "error": "",
+   "latest": "2026-09-29"
+  },
+  {
+   "id": "law_corptax",
+   "name": "법인세법",
+   "area": "세무",
+   "type": "law",
+   "ok": true,
+   "count": 15,
+   "new": 0,
+   "error": "",
+   "latest": "2025-12-23"
+  },
+  {
+   "id": "law_incometax",
+   "name": "소득세법",
+   "area": "세무",
+   "type": "law",
+   "ok": true,
+   "count": 15,
+   "new": 0,
+   "error": "",
+   "latest": "2026-09-08"
+  },
+  {
+   "id": "adm_issue",
+   "name": "증권의 발행 및 공시 등에 관한 규정",
+   "area": "공시",
+   "type": "admrul",
+   "ok": true,
+   "count": 1,
+   "new": 1,
+   "error": "",
+   "latest": "2026-11-03"
+  },
+  {
+   "id": "adm_audit",
+   "name": "외부감사 및 회계 등에 관한 규정",
+   "area": "회계",
+   "type": "admrul",
+   "ok": true,
+   "count": 1,
+   "new": 0,
+   "error": "",
+   "latest": "2026-10-07"
+  },
+  {
+   "id": "fsc_leg",
+   "name": "금융위원회 입법예고",
+   "area": "공시·회계",
+   "type": "board",
+   "ok": true,
+   "count": 10,
+   "new": 10,
+   "error": "",
+   "latest": "2026-11-18"
+  },
+  {
+   "id": "fsc_rule",
+   "name": "금융위원회 규정변경예고",
+   "area": "공시·회계",
+   "type": "board",
+   "ok": true,
+   "count": 10,
+   "new": 1,
+   "error": "",
+   "latest": "2026-11-18"
+  },
+  {
+   "id": "fsc_press",
+   "name": "금융위원회 보도자료",
+   "area": "공시·회계",
+   "type": "board",
+   "ok": true,
+   "count": 10,
+   "new": 9,
+   "error": "",
+   "latest": "2026-11-23"
+  },
+  {
+   "id": "fss_rule",
+   "name": "금융감독원 세칙 제·개정 예고",
+   "area": "공시·회계",
+   "type": "board",
+   "ok": true,
+   "count": 10,
+   "new": 2,
+   "error": "",
+   "latest": "2026-11-16"
+  },
+  {
+   "id": "fss_press",
+   "name": "금융감독원 보도자료",
+   "area": "공시·회계",
+   "type": "board",
+   "ok": true,
+   "count": 10,
+   "new": 10,
+   "error": "",
+   "latest": "2026-11-24"
+  },
+  {
+   "id": "krx_rev",
+   "name": "한국거래소 최근 개정 규정",
+   "area": "공시",
+   "type": "board",
+   "ok": true,
+   "count": 10,
+   "new": 3,
+   "error": "",
+   "latest": "2026-12-14"
+  },
+  {
+   "id": "krx_notice",
+   "name": "한국거래소 규정 제·개정 예고",
+   "area": "공시",
+   "type": "board",
+   "ok": true,
+   "count": 8,
+   "new": 3,
+   "error": "",
+   "latest": "2026-11-18"
+  },
+  {
+   "id": "kasb_std",
+   "name": "한국회계기준원 회계기준 게시판",
+   "area": "회계",
+   "type": "board",
+   "ok": true,
+   "count": 30,
+   "new": 2,
+   "error": "",
+   "latest": "2026-11-09"
+  },
+  {
+   "id": "kasb_press",
+   "name": "한국회계기준원 보도자료",
+   "area": "회계",
+   "type": "board",
+   "ok": true,
+   "count": 10,
+   "new": 3,
+   "error": "",
+   "latest": "2026-11-24"
+  },
+  {
+   "id": "moleg_commercial",
+   "name": "정부 입법예고(상법)",
+   "area": "IR·지배구조",
+   "type": "board",
+   "ok": true,
+   "count": 0,
+   "new": 0,
+   "error": "",
+   "latest": ""
+  },
+  {
+   "id": "moleg_fscma",
+   "name": "정부 입법예고(자본시장법)",
+   "area": "공시",
+   "type": "board",
+   "ok": true,
+   "count": 0,
+   "new": 0,
+   "error": "",
+   "latest": ""
+  },
+  {
+   "id": "moleg_audit",
+   "name": "정부 입법예고(외부감사법)",
+   "area": "회계",
+   "type": "board",
+   "ok": true,
+   "count": 0,
+   "new": 0,
+   "error": "",
+   "latest": ""
+  }
+ ],
+ "tls_unverified": []
+}

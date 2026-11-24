@@ -1,0 +1,29 @@
+name: sync-data-branch
+
+# 예약 작업이 main에 직접 올리지 못하고 claude/ 브랜치로 올렸을 때 main에 합친다.
+on:
+  push:
+    branches: ["claude/**"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reg-watch-data
+  cancel-in-progress: false
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: main에 합치기
+        run: |
+          git config user.name "reg-watch-bot"
+          git config user.email "reg-watch-bot@users.noreply.github.com"
+          git merge --no-edit -X theirs "origin/${GITHUB_REF_NAME}"
+          git push origin HEAD:main

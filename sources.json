@@ -1,0 +1,31 @@
+{
+  "keywords": ["자본시장", "금융투자업", "증권의 발행", "증권신고서", "투자설명서", "사업보고서", "공시", "외부감사", "회계", "감사인", "감사위원", "내부회계", "감리", "IFRS", "기준서", "공개초안", "XBRL", "상장", "코스닥", "유가증권시장", "시장감시", "불공정거래", "미공개", "단기매매", "대량보유", "공개매수", "자기주식", "자사주", "주주", "배당", "의결권", "이사회", "지배구조", "밸류업", "기업가치", "스튜어드십", "지속가능", "ESG", "상법", "전자등록", "전자증권", "합병", "분할", "법인세", "소득세", "분리과세"],
+  "exclude": ["공시송달", "가상자산", "대부업", "보험", "저축은행", "여신전문", "신용정보", "전자금융", "특정 금융거래", "신규 등록", "인가", "세미나", "채용", "입찰"],
+  "sources": [
+    {"id": "law_fscma", "type": "law", "area": "공시", "name": "자본시장과 금융투자업에 관한 법률"},
+    {"id": "law_fscma_dec", "type": "law", "area": "공시", "name": "자본시장과 금융투자업에 관한 법률 시행령"},
+    {"id": "law_fscma_rule", "type": "law", "area": "공시", "name": "자본시장과 금융투자업에 관한 법률 시행규칙"},
+    {"id": "law_audit", "type": "law", "area": "회계", "name": "주식회사 등의 외부감사에 관한 법률"},
+    {"id": "law_audit_dec", "type": "law", "area": "회계", "name": "주식회사 등의 외부감사에 관한 법률 시행령"},
+    {"id": "law_commercial", "type": "law", "area": "IR·지배구조", "name": "상법"},
+    {"id": "law_commercial_dec", "type": "law", "area": "IR·지배구조", "name": "상법 시행령"},
+    {"id": "law_esec", "type": "law", "area": "IR·지배구조", "name": "주식ㆍ사채 등의 전자등록에 관한 법률"},
+    {"id": "law_esec_dec", "type": "law", "area": "IR·지배구조", "name": "주식ㆍ사채 등의 전자등록에 관한 법률 시행령"},
+    {"id": "law_corptax", "type": "law", "area": "세무", "name": "법인세법"},
+    {"id": "law_incometax", "type": "law", "area": "세무", "name": "소득세법"},
+    {"id": "adm_issue", "type": "admrul", "area": "공시", "name": "증권의 발행 및 공시 등에 관한 규정"},
+    {"id": "adm_audit", "type": "admrul", "area": "회계", "name": "외부감사 및 회계 등에 관한 규정"},
+    {"id": "fsc_leg", "type": "board", "area": "공시·회계", "name": "금융위원회 입법예고", "url": "https://www.fsc.go.kr/po040200", "link_re": "/po040200/(\\d+)", "item_url": "https://www.fsc.go.kr/po040200/{0}"},
+    {"id": "fsc_rule", "type": "board", "area": "공시·회계", "name": "금융위원회 규정변경예고", "url": "https://www.fsc.go.kr/po040301", "link_re": "po040301/view\\?noticeId=(\\d+)", "item_url": "https://www.fsc.go.kr/po040301/view?noticeId={0}"},
+    {"id": "fsc_press", "type": "board", "area": "공시·회계", "name": "금융위원회 보도자료", "url": "https://www.fsc.go.kr/no010101", "link_re": "/no010101/(\\d+)", "item_url": "https://www.fsc.go.kr/no010101/{0}"},
+    {"id": "fss_rule", "type": "board", "area": "공시·회계", "name": "금융감독원 세칙 제·개정 예고", "url": "https://www.fss.or.kr/fss/job/lrgRegItnPrvntc/list.do?menuNo=200489", "link_re": "lrgRegItnPrvntc/view\\.do\\?lrgSlno=(\\d+)", "item_url": "https://www.fss.or.kr/fss/job/lrgRegItnPrvntc/view.do?lrgSlno={0}&menuNo=200489"},
+    {"id": "fss_press", "type": "board", "area": "공시·회계", "name": "금융감독원 보도자료", "url": "https://www.fss.or.kr/fss/bbs/B0000188/list.do?menuNo=200218", "link_re": "B0000188/view\\.do\\?nttId=(\\d+)", "item_url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId={0}&menuNo=200218"},
+    {"id": "krx_rev", "type": "board", "area": "공시", "name": "한국거래소 최근 개정 규정", "url": "https://rule.krx.co.kr/out/index.do", "link_re": "goView\\('(\\d+)'", "key_with_date": true, "keywords_extra": ["규정", "세칙", "지침"], "exclude_extra": ["금시장", "파생상품", "코넥스", "청산결제", "석유", "배출권"]},
+    {"id": "krx_notice", "type": "board", "area": "공시", "name": "한국거래소 규정 제·개정 예고", "url": "https://rule.krx.co.kr/out/index.do", "link_re": "goViewpds\\('(\\d+)'", "keywords_extra": ["규정", "세칙", "지침"], "exclude_extra": ["금시장", "파생상품", "코넥스", "청산결제", "석유", "배출권"]},
+    {"id": "kasb_std", "type": "board", "area": "회계", "name": "한국회계기준원 회계기준 게시판", "url": "https://www.kasb.or.kr/front/boardA/List2002.do", "link_re": "fn_Detail\\('2002','(\\d+)'\\)", "max_items": 30, "keywords_extra": ["제정", "개정", "공표", "의견조회", "K-IFRS", "일반기업회계기준"], "exclude_extra": ["동향"]},
+    {"id": "kasb_press", "type": "board", "area": "회계", "name": "한국회계기준원 보도자료", "url": "https://www.kasb.or.kr/front/board/comm020List.do", "link_re": "fn_Detail\\('(\\d+)'\\)", "keywords_extra": ["제정", "개정", "공표", "KSSB", "K-IFRS"]},
+    {"id": "moleg_commercial", "type": "board", "area": "IR·지배구조", "name": "정부 입법예고(상법)", "url": "https://opinion.lawmaking.go.kr/gcom/ogLmPp?lsNm=상법", "link_re": "/gcom/ogLmPp/(\\d+)", "item_url": "https://opinion.lawmaking.go.kr/gcom/ogLmPp/{0}", "allow_empty": true, "title_re": "(?<![가-힣])상법"},
+    {"id": "moleg_fscma", "type": "board", "area": "공시", "name": "정부 입법예고(자본시장법)", "url": "https://opinion.lawmaking.go.kr/gcom/ogLmPp?lsNm=자본시장", "link_re": "/gcom/ogLmPp/(\\d+)", "item_url": "https://opinion.lawmaking.go.kr/gcom/ogLmPp/{0}", "allow_empty": true, "title_re": "자본시장"},
+    {"id": "moleg_audit", "type": "board", "area": "회계", "name": "정부 입법예고(외부감사법)", "url": "https://opinion.lawmaking.go.kr/gcom/ogLmPp?lsNm=외부감사", "link_re": "/gcom/ogLmPp/(\\d+)", "item_url": "https://opinion.lawmaking.go.kr/gcom/ogLmPp/{0}", "allow_empty": true, "title_re": "외부감사"}
+  ]
+}
