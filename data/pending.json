@@ -1,3 +1,88 @@
 {
- "items": []
+ "items": [
+  {
+   "source": "fsc_rule",
+   "source_name": "금융위원회 규정변경예고",
+   "area": "공시·회계",
+   "key": "4191",
+   "title": "｢금융기관검사및제재에관한규정 일부개정고시안｣ 규정변경예고",
+   "date": "2026-11-25",
+   "effective": "",
+   "url": "https://www.fsc.go.kr/po040301/view?noticeId=4191",
+   "detail_url": "https://www.fsc.go.kr/po040301/view?noticeId=4191",
+   "matched": false,
+   "hints": [],
+   "found": "2026-11-25"
+  },
+  {
+   "source": "fsc_rule",
+   "source_name": "금융위원회 규정변경예고",
+   "area": "공시·회계",
+   "key": "4190",
+   "title": "「보험업법 시행령」 일부개정령안 입법예고",
+   "date": "2026-11-25",
+   "effective": "",
+   "url": "https://www.fsc.go.kr/po040301/view?noticeId=4190",
+   "detail_url": "https://www.fsc.go.kr/po040301/view?noticeId=4190",
+   "matched": false,
+   "hints": [],
+   "found": "2026-11-25"
+  },
+  {
+   "source": "fsc_press",
+   "source_name": "금융위원회 보도자료",
+   "area": "공시·회계",
+   "key": "88216",
+   "title": "“다음 금융은 이미 시작됐다” 제8회 「코리아 핀테크 위크 2026」 개막 . 금일 등록된 게시글",
+   "date": "2026-11-25",
+   "effective": "",
+   "url": "https://www.fsc.go.kr/no010101/88216",
+   "detail_url": "https://www.fsc.go.kr/no010101/88216",
+   "matched": false,
+   "hints": [],
+   "found": "2026-11-25"
+  },
+  {
+   "source": "fss_press",
+   "source_name": "금융감독원 보도자료",
+   "area": "공시·회계",
+   "key": "250013",
+   "title": "환매중단펀드를 보유한 퇴직연금 계좌도 실물이전이 가능해집니다",
+   "date": "2026-11-25",
+   "effective": "",
+   "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=250013&menuNo=200218",
+   "detail_url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=250013&menuNo=200218",
+   "matched": false,
+   "hints": [],
+   "found": "2026-11-25"
+  },
+  {
+   "source": "fss_press",
+   "source_name": "금융감독원 보도자료",
+   "area": "공시·회계",
+   "key": "250012",
+   "title": "금융감독원, 모험자본 활성화 추진 성과 및 향후 계획",
+   "date": "2026-11-25",
+   "effective": "",
+   "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=250012&menuNo=200218",
+   "detail_url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=250012&menuNo=200218",
+   "matched": false,
+   "hints": [],
+   "found": "2026-11-25"
+  },
+  {
+   "source": "fss_press",
+   "source_name": "금융감독원 보도자료",
+   "area": "공시·회계",
+   "key": "250011",
+   "title": "2026년 1~9월 보험회사 경영실적(잠정)",
+   "date": "2026-11-25",
+   "effective": "",
+   "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=250011&menuNo=200218",
+   "detail_url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=250011&menuNo=200218",
+   "matched": false,
+   "hints": [],
+   "found": "2026-11-25"
+  }
+ ]
 }

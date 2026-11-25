@@ -2,6 +2,14 @@
  "runs": [
   {
    "date": "2026-11-25",
+   "at": "2026-11-25 14:03",
+   "checked": 25,
+   "failed": 0,
+   "new": 6,
+   "matched": 0
+  },
+  {
+   "date": "2026-11-25",
    "at": "2026-11-25 08:44",
    "checked": 25,
    "failed": 0,
@@ -43,10 +51,10 @@
  ],
  "last": {
   "date": "2026-11-25",
-  "at": "2026-11-25 08:44",
+  "at": "2026-11-25 14:03",
   "checked": 25,
   "failed": 0,
-  "new": 0,
+  "new": 6,
   "matched": 0
  },
  "sources": [
@@ -211,9 +219,9 @@
    "type": "board",
    "ok": true,
    "count": 10,
-   "new": 0,
+   "new": 2,
    "error": "",
-   "latest": "2026-11-18"
+   "latest": "2026-11-25"
   },
   {
    "id": "fsc_press",
@@ -222,9 +230,9 @@
    "type": "board",
    "ok": true,
    "count": 10,
-   "new": 0,
+   "new": 1,
    "error": "",
-   "latest": "2026-11-24"
+   "latest": "2026-11-25"
   },
   {
    "id": "fss_rule",
@@ -244,9 +252,9 @@
    "type": "board",
    "ok": true,
    "count": 10,
-   "new": 0,
+   "new": 3,
    "error": "",
-   "latest": "2026-11-24"
+   "latest": "2026-11-25"
   },
   {
    "id": "krx_rev",
