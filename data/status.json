@@ -1,6 +1,14 @@
 {
  "runs": [
   {
+   "date": "2026-11-26",
+   "at": "2026-11-26 08:47",
+   "checked": 25,
+   "failed": 0,
+   "new": 14,
+   "matched": 4
+  },
+  {
    "date": "2026-11-25",
    "at": "2026-11-25 14:03",
    "checked": 25,
@@ -50,12 +58,12 @@
   }
  ],
  "last": {
-  "date": "2026-11-25",
-  "at": "2026-11-25 14:03",
+  "date": "2026-11-26",
+  "at": "2026-11-26 08:47",
   "checked": 25,
   "failed": 0,
-  "new": 6,
-  "matched": 0
+  "new": 14,
+  "matched": 4
  },
  "sources": [
   {
@@ -219,7 +227,7 @@
    "type": "board",
    "ok": true,
    "count": 10,
-   "new": 2,
+   "new": 1,
    "error": "",
    "latest": "2026-11-25"
   },
@@ -230,7 +238,7 @@
    "type": "board",
    "ok": true,
    "count": 10,
-   "new": 1,
+   "new": 4,
    "error": "",
    "latest": "2026-11-25"
   },
@@ -241,9 +249,9 @@
    "type": "board",
    "ok": true,
    "count": 10,
-   "new": 0,
+   "new": 3,
    "error": "",
-   "latest": "2026-11-16"
+   "latest": "2026-11-25"
   },
   {
    "id": "fss_press",
@@ -252,9 +260,9 @@
    "type": "board",
    "ok": true,
    "count": 10,
-   "new": 3,
+   "new": 6,
    "error": "",
-   "latest": "2026-11-25"
+   "latest": "2026-11-26"
   },
   {
    "id": "krx_rev",
