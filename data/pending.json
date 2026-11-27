@@ -1,3 +1,66 @@
 {
- "items": []
+ "items": [
+  {
+   "source": "fsc_press",
+   "source_name": "금융위원회 보도자료",
+   "area": "공시·회계",
+   "key": "88256",
+   "title": "금융시장 동향 및 증시안정조치 진행상황 점검 . 금일 등록된 게시글",
+   "date": "2026-11-27",
+   "effective": "",
+   "url": "https://www.fsc.go.kr/no010101/88256",
+   "detail_url": "https://www.fsc.go.kr/no010101/88256",
+   "matched": false,
+   "hints": [],
+   "found": "2026-11-27"
+  },
+  {
+   "source": "fss_press",
+   "source_name": "금융감독원 보도자료",
+   "area": "공시·회계",
+   "key": "250058",
+   "title": "금융시장 동향 및 증시안정조치 진행상황 점검",
+   "date": "2026-11-27",
+   "effective": "",
+   "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=250058&menuNo=200218",
+   "detail_url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=250058&menuNo=200218",
+   "matched": false,
+   "hints": [],
+   "found": "2026-11-27"
+  },
+  {
+   "source": "krx_rev",
+   "source_name": "한국거래소 최근 개정 규정",
+   "area": "공시",
+   "key": "330027569|2026-12-14",
+   "title": "KRX금시장 운영규정 시행세칙",
+   "date": "2026-12-14",
+   "effective": "",
+   "url": "https://rule.krx.co.kr/out/index.do",
+   "detail_url": "",
+   "matched": false,
+   "hints": [
+    "규정",
+    "세칙"
+   ],
+   "found": "2026-11-27"
+  },
+  {
+   "source": "krx_rev",
+   "source_name": "한국거래소 최근 개정 규정",
+   "area": "공시",
+   "key": "330027516|2026-12-01",
+   "title": "파생상품시장 업무규정 시행세칙",
+   "date": "2026-12-01",
+   "effective": "",
+   "url": "https://rule.krx.co.kr/out/index.do",
+   "detail_url": "",
+   "matched": false,
+   "hints": [
+    "규정",
+    "세칙"
+   ],
+   "found": "2026-11-27"
+  }
+ ]
 }
