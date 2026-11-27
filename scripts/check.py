@@ -370,7 +370,7 @@ def run(args):
     if report and len(failed) == len(report):
         # 모든 출처가 실패한 것은 사이트가 아니라 실행 환경 문제다(망 차단 등).
         # 마지막 정상 수집 결과를 덮어쓰지 않고, 점검 기록에 실패 한 줄만 남긴 뒤 3으로 끝낸다.
-        if not args.only:
+        if not args.only and not args.no_fail_log:
             summary["error"] = failed[0]["error"][:120]
             status["runs"] = ([summary] + [r for r in status.get("runs", []) if r.get("at") != summary["at"]])[:60]
             save_json(status_path, status)
@@ -394,6 +394,8 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--only", nargs="*")
     ap.add_argument("--backfill", type=int, default=0)
+    ap.add_argument("--no-fail-log", action="store_true",
+                    help="모든 출처가 실패해도 점검 기록에 남기지 않음(collect.sh가 GitHub 서버 수집으로 넘길 때 씀)")
     sys.exit(run(ap.parse_args()))
 
 

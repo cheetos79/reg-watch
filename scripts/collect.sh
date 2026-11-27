@@ -35,7 +35,8 @@ print(datetime.now(timezone(timedelta(hours=9))).strftime(sys.argv[1]))
 
 direct=3
 if [ "${FORCE_REMOTE:-0}" != "1" ]; then
-  python3 scripts/check.py
+  # 여기서 전부 막히는 것은 환경 탓이고 곧 GitHub 서버 수집으로 넘어가므로 점검 기록에는 남기지 않는다
+  python3 scripts/check.py --no-fail-log
   direct=$?
 fi
 
