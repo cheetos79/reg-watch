@@ -6,9 +6,12 @@
 
 | 시각(한국) | 주체 | 하는 일 |
 |---|---|---|
-| 평일 07:40 | GitHub Actions `daily-check` | `scripts/check.py`로 출처를 읽어 직전 스냅샷과 비교, 새 항목을 `data/pending.json`에 저장 |
-| 평일 08:30 | 예약 작업(Claude) | `ROUTINE.md` 절차대로 새 항목의 관련성을 판단하고 `reports/날짜.json` 작성, `scripts/publish.py`로 검사·반영 |
+| 평일 08:30 | 예약 작업(Claude) | `ROUTINE.md` 절차대로 `scripts/collect.sh`로 수집하고, 새 항목의 관련성을 판단해 `reports/날짜.json` 작성, `scripts/publish.py`로 검사·반영 |
+| 요청 시 | GitHub Actions `daily-check` | 예약 작업의 실행 환경에서 사이트 접속이 막혀 있으면 `collect-request.txt`가 올라온다. 이때 GitHub 서버가 대신 수집해 `data/`에 저장 |
+| 평일 오후 | GitHub Actions `daily-check` | 보조 수집. 07:40으로 예약했으나 GitHub 예약은 몇 시간 늦게 도는 일이 잦다. 이때 잡힌 항목은 다음 날 아침 보고서에 들어감 |
 | 수시 | GitHub Pages | `index.html`이 `data/`와 `reports/`를 읽어 화면에 표시 |
+
+수집은 `scripts/check.py`가 한다. 출처를 읽어 직전 스냅샷과 비교하고 새 항목을 `data/pending.json`에 쌓는다. 모든 출처가 실패하면(실행 환경의 망 차단) 마지막 정상 결과를 덮어쓰지 않고 점검 기록에 실패 한 줄만 남긴다.
 
 ## 파일
 
@@ -16,6 +19,8 @@
 |---|---|
 | `sources.json` | 점검 출처, 관심 단어, 제외 단어 |
 | `scripts/check.py` | 수집과 비교(파이썬 표준 라이브러리만 사용) |
+| `scripts/collect.sh` | 수집 실행기. 직접 수집하고, 접속이 막히면 GitHub 서버에 수집을 맡김 |
+| `collect-request.txt` | GitHub 서버 수집 요청 표시(내용은 요청 시각) |
 | `scripts/publish.py` | 보고서 형식 검사, 변경 이력 반영, 대기 항목 비우기 |
 | `ROUTINE.md` | 예약 작업이 따르는 절차와 보고서 작성 규칙 |
 | `data/state.json` | 출처별로 이미 본 항목 |

@@ -1,6 +1,11 @@
 name: daily-check
 
-# 평일 오전 7시 40분(한국 시각)에 출처를 수집한다. 보고서 작성은 8시 30분 예약 작업이 맡는다.
+# 출처를 수집한다. 도는 경우는 세 가지다.
+# 1. 요청: collect-request.txt가 바뀌어 올라오면 바로 돈다. 8시 30분 예약 작업이 자기 환경에서
+#    사이트에 접속하지 못할 때 scripts/collect.sh로 이 파일을 올려 수집을 맡긴다.
+# 2. 예약: 평일 오전 7시 40분(한국 시각)으로 걸어 두었으나 GitHub 예약은 몇 시간 늦게 도는 일이 잦다.
+#    그래서 오후 보조 수집으로 본다. 이때 잡힌 항목은 다음 날 아침 보고서에 들어간다.
+# 3. 수집 코드나 출처 목록이 바뀌어 올라왔을 때.
 on:
   schedule:
     - cron: "40 22 * * 0-4"
@@ -8,6 +13,7 @@ on:
   push:
     branches: [main]
     paths:
+      - "collect-request.txt"
       - "sources.json"
       - "scripts/check.py"
       - ".github/workflows/check.yml"

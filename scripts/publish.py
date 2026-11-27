@@ -5,6 +5,7 @@
 사용법
   python3 scripts/publish.py reports/2026-11-24.json   보고서 검사 후 반영, 처리한 대기 항목 비움
   python3 scripts/publish.py --clear-only              보고할 것이 없을 때 대기 항목만 비움
+  끝에 --collect-failed 를 붙이면 수집하지 못한 날임을 가동 기록에 함께 남김
 """
 import json
 import os
@@ -100,15 +101,18 @@ def log_run(result):
 
 def main():
     today = datetime.now(KST).strftime("%Y-%m-%d")
-    if len(sys.argv) == 2 and sys.argv[1] == "--clear-only":
+    argv = [a for a in sys.argv[1:] if a != "--collect-failed"]
+    # 수집을 못 한 날은 가동 기록에 그 사실을 함께 남긴다
+    prefix = "수집 실패, " if len(argv) != len(sys.argv) - 1 else ""
+    if argv == ["--clear-only"]:
         n = clear_pending(today)
-        log_run("보고할 변경 없음(새 글 %d건 제외)" % n if n else "보고할 변경 없음")
+        log_run(prefix + ("보고할 변경 없음(새 글 %d건 제외)" % n if n else "보고할 변경 없음"))
         print("대기 항목 %d건 비움" % n)
         return 0
-    if len(sys.argv) != 2:
+    if len(argv) != 1:
         print(__doc__)
         return 2
-    path = sys.argv[1]
+    path = argv[0]
     rep = load(path, None)
     if rep is None:
         print("파일 없음: " + path)
@@ -139,7 +143,7 @@ def main():
     idx["updated"] = datetime.now(KST).strftime("%Y-%m-%d %H:%M")
     save(idx_path, idx)
     cleared = clear_pending(max(today, rep["date"]))
-    log_run("보고서 반영 %d건(A %d, B %d)" % (day["count"], day["a"], day["b"]))
+    log_run(prefix + "보고서 반영 %d건(A %d, B %d)" % (day["count"], day["a"], day["b"]))
     print("반영 완료: %s, 항목 %d건(A %d, B %d), 대기 항목 %d건 비움" % (rep["date"], day["count"], day["a"], day["b"], cleared))
     return 0
 

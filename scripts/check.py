@@ -77,6 +77,12 @@ def decode(raw):
     return raw.decode("utf-8", "replace")
 
 
+def is_blocked(exc):
+    """실행 환경의 프록시가 접속을 거절했는지 본다(허용 목록에 없는 사이트)."""
+    text = str(exc)
+    return "Tunnel connection failed" in text or "agent proxy" in text
+
+
 def http_get(url, tries=4):
     """페이지 본문을 문자열로 돌려준다. 같은 실행 안에서는 한 번만 받는다."""
     if url in _cache:
@@ -107,6 +113,10 @@ def http_get(url, tries=4):
                 if verify and is_tls:
                     continue  # 인증서 사슬이 불완전한 기관 사이트는 검증 없이 한 번 더 시도
                 break
+        if is_blocked(last):
+            # 실행 환경의 망 정책이 이 사이트를 막은 것이다. 다시 두드려도 결과가 같으므로 바로 포기한다.
+            _dead_hosts[host] = "%s: %s" % (type(last).__name__, str(last)[:80])
+            raise last
         time.sleep(2 * (attempt + 1))
     # 접속 자체가 안 되는 사이트는 이번 실행에서 다시 두드리지 않는다(해외 서버 차단 등)
     # 일시적 연결 끊김(reset) 한 번으로 전체를 포기하지 않도록 연속 실패가 쌓일 때만 포기한다
@@ -357,6 +367,16 @@ def run(args):
     if args.dry_run:
         return 0
 
+    if report and len(failed) == len(report):
+        # 모든 출처가 실패한 것은 사이트가 아니라 실행 환경 문제다(망 차단 등).
+        # 마지막 정상 수집 결과를 덮어쓰지 않고, 점검 기록에 실패 한 줄만 남긴 뒤 3으로 끝낸다.
+        if not args.only:
+            summary["error"] = failed[0]["error"][:120]
+            status["runs"] = ([summary] + [r for r in status.get("runs", []) if r.get("at") != summary["at"]])[:60]
+            save_json(status_path, status)
+        print("모든 출처 접속 실패: 이 환경에서는 수집할 수 없음", flush=True)
+        return 3
+
     if not args.only:
         status["last"] = summary
         status["sources"] = report
@@ -366,8 +386,7 @@ def run(args):
     pending["items"].extend(new_items)
     save_json(pending_path, pending)
     save_json(state_path, state)
-    # 모든 출처가 실패하면(망 차단 등) 호출한 쪽이 알 수 있게 3으로 끝낸다
-    return 3 if report and len(failed) == len(report) else 0
+    return 0
 
 
 def main():
